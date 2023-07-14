@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Kanit', sans-serif;  
+    background: #210d5c;
+}
+
+header{
+    display: flex;
+    margin: auto;
+    width: 90%;
+    height: 150px;
+    align-items: center;
+}
+.cart,.logo-container,.nav-links{
+    display: flex;
+}
+.logo-container{
+    flex: 1;
+}
+.logo{
+    font-weight: 400;
+    margin: 5px;
+}
+.logo-container h4{
+    font-size: 30px;
+    color:  #FFD700;
+}
+.nav-links{
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-link {
+    color: pink;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 500;
+}
+.nav-links a:hover{
+    cursor: pointer;
+    color: rgb(74, 165, 255);
+    background: #f7e05a;
+    border-radius: 3px;
+    font-weight: 700;
+    box-shadow: 0px 0px 35px 13px rgba(247,224,90,0.64);
+}
+nav{
+    flex: 2;
+}
+.cart{
+    flex: 1;
+    justify-content: flex-end;
+}
+.presentation{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 400px;
+    align-items: center;
+   
+}
+.cover{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+}
+.cover img{
+    height: 100%;
+    filter: drop-shadow(0px 5px 3px black);
+    animation: drop 2s ease;
+}
+.introduction{
+    flex: 1;
+}
+.intro-text h1{
+    font-size: 50px;
+    font-weight: 700;
+    background: linear-gradient(to right, #ffb76b 0%,#ffa73d 34%,#ff7c00 63%,#ff7f04 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.intro-text p{
+    margin: 5px;
+    font-size: 20px;
+    color: #fec18a;
+}
+.cta{
+    padding: 50px 0 0 0;
+}
+.cta-select{
+    border: 2px solid pink;
+    color: pink;
+    width: 150px;
+    height: 50px;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    margin: 20px;
+}
+.cta-select:hover{
+    border: 2px solid pink;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    background: pink;
+    color: white;
+}
+.cta-add{
+    border: none;
+    color: white;
+    width: 150px;
+    height: 50px;
+    background: pink;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    
+}
+.cta-add:hover{
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    margin: 20px;
+    background: transparent;
+    color: pink;
+    border: 2px solid pink;
+
+}
+.big-circle{
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.8;
+    height: 80%;
+}
+.medium-circle{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: -1;
+    opacity: 0.8;
+    height: 60%;
+}
+.small-circle{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: -1;
+    opacity: 0.8;
+    height: 40%;
+}
+.laptop-select{
+    position: absolute;
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+    right: 20%;
+}
+
+@keyframes drop{
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+        }
+    100%{
+            opacity: 1;
+            transform: translateY(0px);
+    }    
+}
+@media screen and (max-width: 1024px){
+    .presentation {
+        flex-direction: column;
+    }
+    .introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+    .intro-text h1{
+        font-size: 30px;
+    }
+    .intro-text p{
+        font-size: 18px;
+    }
+    .cta{
+        padding: 10px 0px 0px 0px;
+    }
+    .laptop-select{
+        bottom: 5%;
+        right: 50%;
+        width: 50%;
+        transform: translate(50%, 5%);
+    }
+    .cover img{
+        height: 50%;
+
+    }
+    .small-circle,.medium-circle,.big-circle{
+        opacity: 0.3;
+    }
+
+}
